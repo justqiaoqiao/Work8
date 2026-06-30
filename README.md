@@ -106,7 +106,7 @@ $$v_i' = \sum_{k=1}^{K} w_{ik} G_k(\theta,J(\beta)) \begin{bmatrix}v_i^{posed}\\
 
 
 ## 效果演示
-<img width="1077" height="1120" alt="image" src="https://github.com/user-attachments/assets/a0710ac8-ac09-4e2a-a41e-bdc452e9ab51" />
+![演示动画](lbs_animation_optimized.gif)
 
 
 
