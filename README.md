@@ -43,8 +43,6 @@ $$v_i' = \sum_{k=1}^{K} w_{ik} G_k(\theta,J(\beta)) \begin{bmatrix}v_i^{posed}\\
 1. 绘制T-pose模板网格；
 2. 单关节权重映射为热力图；可选绘制各顶点主导关节分布图。
 
-思考题：顶点为何绑定多关节权重？极端权重分布会出现什么渲染缺陷？
-
 ### 任务3：阶段(b) 形状校正与关节可视化
 输出：`outputs/stage_b_shaped_joints.png`
 1. 设置非零$\beta$计算`v_shaped`；
@@ -74,6 +72,30 @@ $$v_i' = \sum_{k=1}^{K} w_{ik} G_k(\theta,J(\beta)) \begin{bmatrix}v_i^{posed}\\
 输出：`outputs/summary.txt`
 1. 相同输入分别运行手写LBS、官方SMPL前向；
 2. 计算MAE平均绝对误差、MaxAE最大绝对误差，写入文本。
+
+## 实验输出可视化结果
+### 阶段(a) 模板网格与单关节权重热力图
+![模板网格+单关节权重热力图](outputs/stage_a_template_weights.png)
+
+### 全关节主导权重分布图
+![全关节主导权重分布](outputs/all_joint_weights.png)
+
+### 阶段(b) 形状校正网格与回归关节
+![形状形变网格+人体关节可视化](outputs/stage_b_shaped_joints.png)
+
+### 阶段(c) 姿态偏移校正可视化
+![姿态偏移修正区域着色图](outputs/stage_c_pose_offsets.png)
+
+### 阶段(d) 完整LBS蒙皮最终姿态
+![线性混合蒙皮最终人体姿态](outputs/stage_d_lbs_result.png)
+
+### 四阶段对比总图
+![四大计算阶段对比2×2网格图](outputs/comparison_grid.png)
+
+<img width="876" height="369" alt="image" src="https://github.com/user-attachments/assets/b44e35aa-fd94-4fcb-a243-2b873da7f676" />
+
+
+
 
 ## 4. 运行环境
 ```bash
