@@ -94,6 +94,20 @@ $$v_i' = \sum_{k=1}^{K} w_{ik} G_k(\theta,J(\beta)) \begin{bmatrix}v_i^{posed}\\
 
 <img width="876" height="369" alt="image" src="https://github.com/user-attachments/assets/b44e35aa-fd94-4fcb-a243-2b873da7f676" />
 
+# 单骨骼旋转蒙皮动画实验
+## 实验目的
+固定模型Shape参数，驱动单关节从0°渐变旋转至目标角度，导出GIF/帧图，观察蒙皮权重区域平滑形变效果。
+
+## 实现要点
+1. 锁定网格Shape，不修改模型外形
+2. 单关节角度线性插值：0° → 目标角度
+3. 逐帧渲染，输出图片序列或合成GIF/MP4
+4. 观测权重过渡区随骨骼运动的平滑拉伸效果
+
+
+## 效果演示
+![骨骼旋转蒙皮动画](./assets/bone_anim_demo.gif)
+
 
 
 
